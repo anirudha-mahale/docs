@@ -235,8 +235,8 @@ SCart.shared.getCartCount() -> Int
 5 //Total product count in the cart
 ```
 ## Buy Now
-* This class is used to display Checkout View.
-`SCheckoutView`
++ Since checkout process involves complex logic and handling of data flow we provide you out of the box User Interface.
+* Use `SCheckoutView` class to show the checkout UI
 ## Set your custom Fonts
 
 To match with your application style we provide you an interface to set fonts.

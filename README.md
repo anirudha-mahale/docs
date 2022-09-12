@@ -43,6 +43,39 @@ class AppDelegate: NSObject, UIApplicationDelegate {
   }
 }
 ```
+## Authentication
++ The class `SUser` is used to verify the user. 
++ User verification is required in order to order any products.
++ The above class exposes 2 methods to verify the user.
+
+Request OTP
+```swift
+SUser().requestOtp(country:Country,telephone:String,via:Grassdoor.OTPRequestType,onCompletion:((_ onCompletion :Grassdoor.Operation?) -> Void)?)
+```
+
+#### Parameters
++ `country: Country` is an enum with available countries
++ `telephone: String` is your mobile number
++ `via: Grassdoor.OTPRequestType` is enum with available ways to validate the user, which are over text or call.
+
+#### Response
++ response is a optional closure of type `((_ onCompletion :Grassdoor.Operation?) -> Void)?`
++ `Grassdoor.Operation` is an struct with several properties.
+
+Varify OTP
+```swift
+SUser().verifyUser(country:Country,telephone:String,otp:String,onCompletion:((_ user :GrassdoorUserData?) -> Void)?)
+```
+
+#### Parameters
++ `country: Country` is an enum with available countries
++ `telephone: String` is your mobile number
++ `otp: String` is the otp that you received over your preferred way
+
+#### Response
++ response is a optional closure of type `((_ user :GrassdoorUserData?) -> Void)?`
++ `GrassdoorUserData` is an struct with several user related properties.
+
 ## Set Delivery Details and Delivery Type
 ```swift
 GrassdoorManager.shared.setUserDeliveryDetails(address: Grassdoor.Address)
@@ -117,6 +150,66 @@ This will save user's info to the disk which can be used autofill the details in
 GrassdoorManager.shared.setCurrentUser(data:GrassdoorUserData,
                                        onCompletion:((_ operation : GrassdoorUserData?) -> Void)?)
 ```
+
+## Get User's Order History
+Take user to order history place only when the user is logged in, there is another API to check the same `Check Users login status`
+
+This API will return a promise which will contain list of User's order history.
+
+Order history API includes all order by a user, covering the ongoing orders, and user needs to be routed the user to `https://<domain>/confirmation/<order-id>` to see full order details 
+
+
+```swift
+GrassdoorManager.shared.getUsersOrderHistory(offset: Int, items: Int = 5, onComplete: @escaping (_: Result<AllOrders, APIError>) -> Void)
+```
+
+#### Parameters
++ `offset: Int` Default offset is 0
++ `items: Int` Number of items per page
+
+#### Response
++ response is a escaping closure of type `(_: Result<AllOrders, APIError>) -> Void)`
++ `AllOrders` is an struct with orders & count of all orders.
+
+
+## Category/Product Listing
++ The class `SShopData` enables you to get the category/products list & details of single product. 
+
+Category/Product Listing
+```swift
+SShopData.fetchMenu(deliveryType: DeliveryType, filters: [FilterList]?, onComplete: @escaping (_: Result<[Category], APIError> ) -> Void)
+```
+
+#### Parameters
++ `deliveryType: DeliveryType` is an enum with 2 values either asap, scheduled
++ `filters: [FilterList]?` is an optional, you can use filter to sort and filter the result.
+
+#### Response
++ response is a escaping closure of type `(_: Result<[Category], APIError> ) -> Void`
++ `Category` is an struct with several properties which also contains the list of products.
+
+```
+Note: You have to sent the user delivery location before using the category/product listing.
+```
+
+Product Details
+
++ There are 2 methods to get product details.
+
+```swift
+SShopData.getProductDetail(slug: String, type: ProductType, success: @escaping (_: Product) -> Void)
+SShopData.getProductDetail(id: String, type: ProductType, success: @escaping (_: Product) -> Void)
+```
+
+#### Parameters
++ `slug` 
++ `id` id of the product you want to get details of
++ `type: ProductType` the type can be single product or bundle.
+
+#### Response
++ response is a escaping closure of type `(_: Product) -> Void)`
++ `Product` is an struct with several properties which also contains the list of similar products.
+
 ## Get Product Count Based on ID
 ```swift
 SCart.shared.getProductCount(id: Int, type: Grassdoor.ProductType) -> Int
@@ -144,3 +237,23 @@ SCart.shared.getCartCount() -> Int
 ## Buy Now
 * This class is used to display Checkout View.
 `SCheckoutView`
+## Set your custom Fonts
+
+To match with your application style we provide you an interface to set fonts.
+
+If you don't provide with font, Default we use is `ProximaNova`
+
+Installation
++ Drag & Drop fonts in project structure and add it to your target.
++ Use the below method to set the fonts with respect to their font weights
+
+```swift
+GrassdoorManager.shared.setCustomFonts(regular: String?, semiBold: String?, bold: String?, extraBold: String?, italic: String?)
+```
+
+#### Parameters
++ `regular: String?` filename of regular font
++ `semiBold: String?` filename of semiBold font
++ `bold: String?` filename of bold font
++ `extraBold: String?` filename of extraBold font
++ `italic: String?` filename of italic font

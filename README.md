@@ -22,26 +22,24 @@ Install Manually
 + Click on the + button under the "Frameworks, Libraries and Embedded Content" section.
 + Select the `GrassdoorFramework.xcframework`.
 + If framework is not available than click on "Add Others" -> "Add Files", navigate to framework & select it.
-+ And that's it!
-
-Add the below dependencies to your project since those are required by the framework.
-```bash
-Alamofire v5.4
-Socket.IO-Client-Swift v15.2.0
-AlgoliaSearchClient v8.0
-Rollbar v1.4.2
-SDWebImageSwiftUI
-Buglife
-Firebase/Crashlytics
-lottie-ios
-Segment-Appboy
-Segment-Firebase
-Branch
-ZendeskAnswerBotSDK
-ZendeskChatSDK
-ZendeskSupportSDK
-GoogleTagManager
-```
++ Add the below dependencies to your project since those are required by the framework.
+  ```bash
+  Alamofire v5.4
+  Socket.IO-Client-Swift v15.2.0
+  AlgoliaSearchClient v8.0
+  Rollbar v1.4.2
+  SDWebImageSwiftUI
+  Buglife
+  Firebase/Crashlytics
+  lottie-ios
+  Segment-Appboy
+  Segment-Firebase
+  Branch
+  ZendeskAnswerBotSDK
+  ZendeskChatSDK
+  ZendeskSupportSDK
+  GoogleTagManager
+  ```
     
 ## Initialization
 The Methods made available by the GrassdoorFramework exposes features which are available in our Grassdoor App.

@@ -1,18 +1,9 @@
 
 # Setup your Integration
-
 The GrassdoorFramework iOS SDK is compatible with apps supporting iOS 14 and above, and can be installed with CocoaPods as of now.
-
-
 
 ## Installation
 The Grassdoor Framework iOS SDK is compatible with apps supporting iOS 14 and above, and can be installed with CocoaPods or by manually integrating the framework.
-
-Install with Cocoapods
-
-```bash
-  Coming soon
-```
 
 Install Manually
 + Download the `GrassdoorFramework.xcframework` from Github
@@ -121,12 +112,17 @@ SShopData.setDelivery(type: Grassdoor.DeliveryType, onCompletion: ((Grassdoor.Op
     1 .asap - The product is available in your area & will be delivered within 40 minutes
 
     2 .scheduled - You can select the time slots 
-## Show the Cart​
+## Show the Cart
 * Simply use this class to display the cart.
 * The view has inbuild functionality for addition/deletion of products to/from cart.
 
-```swift
+```swiftUI
 SCartView
+```
+
+* For UIKit simply wrap the above class in `UIHostingController`
+```swiftUI
+UIHostingController(rootView: SCartView())
 ```
 
 
@@ -257,6 +253,7 @@ SCart.shared.getCartCount() -> Int
 ## Buy Now
 + Since checkout process involves complex logic and handling of data flow we provide you out of the box User Interface.
 * Use `SCheckoutView` class to show the checkout UI
+* For UIKit use `UIHostingController(rootView: SCheckoutView())`
 ## Set your custom Fonts
 
 To match with your application style we provide you an interface to set fonts.

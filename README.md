@@ -14,14 +14,14 @@ Install Manually
 + Select the `GrassdoorFramework.xcframework`.
 + If framework is not available than click on "Add Others" -> "Add Files", navigate to framework & select it.
 + Add the below dependencies to your project since those are required by the framework.
-  ```bash
+    ```bash
     Socket.IO-Client-Swift v15.2.0
     lottie-ios
     Segment-Appboy
     Segment-Firebase
     Rollbar v1.4.2
     Branch
-  ```
+    ```
     
 ## Initialization
 The Methods made available by the GrassdoorFramework exposes features which are available in our Grassdoor App.

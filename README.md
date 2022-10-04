@@ -15,21 +15,12 @@ Install Manually
 + If framework is not available than click on "Add Others" -> "Add Files", navigate to framework & select it.
 + Add the below dependencies to your project since those are required by the framework.
   ```bash
-  Alamofire v5.4
-  Socket.IO-Client-Swift v15.2.0
-  AlgoliaSearchClient v8.0
-  Rollbar v1.4.2
-  SDWebImageSwiftUI
-  Buglife
-  Firebase/Crashlytics
-  lottie-ios
-  Segment-Appboy
-  Segment-Firebase
-  Branch
-  ZendeskAnswerBotSDK
-  ZendeskChatSDK
-  ZendeskSupportSDK
-  GoogleTagManager
+    Socket.IO-Client-Swift v15.2.0
+    lottie-ios
+    Segment-Appboy
+    Segment-Firebase
+    Rollbar v1.4.2
+    Branch
   ```
     
 ## Initialization

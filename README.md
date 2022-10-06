@@ -281,7 +281,7 @@ The Grassdoor SDK supports a number of feature which allow for customizing certa
  + APP_BACKGROUND_COLOR: Background color of the app (Not being used)
  + APP_DEFAULT_COLOR: Specify the hex code of color to be used as theme and primary color
  + APP_ENV_NAME: Environment name like Production, Staging & etch
- + APP_SHORT_NAME:
+ + APP_SHORT_NAME: Your application short name
  + BRANCH_KEY: The branch key is required to initialise the branch sdk
  + BRANCH_LINK_DOMAIN: Redirect link for the branch sdk
  + BRANCH_LINK_DOMAIN_ALTERNATE: Alternate redirect link for the branch sdk
@@ -290,7 +290,7 @@ The Grassdoor SDK supports a number of feature which allow for customizing certa
  + CONTACT_EMAIL: Contact email of the organisation
  + HOST_URL: Frontend url of the organisation
  + IS_GRASSDOOR: Flag indicating if the application is grassdoor or not
- + LAUNCHER_NAME: 
+ + LAUNCHER_NAME: Your application Launcher name
  + ROLLBAR_KEY: Rollbar token to initialise the Rollbar Tracker
  + SEGMENT_API_KEY: Segment token to initialise the Sigment Analytics
  + WEBSITE_URL: Organisation frontend url

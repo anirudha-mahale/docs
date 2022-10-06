@@ -275,13 +275,11 @@ Configuration file
 The Grassdoor SDK supports a number of feature which allow for customizing certain UI aspects and behavior.
 
  + API_BASE_URL: Base url of Grassdoor backend
- + API_VERSION: Route version for the Grassdoor backend
  + API_KEY: Secret key to validate the Grassdoor backend access
  + APPLICATION_NAME: Your application name
  + APPSTORE_ID: The app is on the Apple store
  + APP_BACKGROUND_COLOR: Background color of the app (Not being used)
  + APP_DEFAULT_COLOR: Specify the hex code of color to be used as theme and primary color
- + APP_ENV:
  + APP_ENV_NAME: Environment name like Production, Staging & etch
  + APP_SHORT_NAME:
  + BRANCH_KEY: The branch key is required to initialise the branch sdk
@@ -290,22 +288,10 @@ The Grassdoor SDK supports a number of feature which allow for customizing certa
  + BRAZE_API_KEY: Required by AppBoy framework
  + BRAZE_END_POINT: Required by AppBoy framework
  + CONTACT_EMAIL: Contact email of the organisation
- + FIREBASE_PLIST_FILENAME: Filename of Google plist file
- + HIDE_FILTER_AND_SORT: Flag indicating to toggle visibility filter & sort functionality
- + HIDE_PRODUCT_PROPERTIES: Flag indicating to toggle visibility Product properties
- + HIDE_PRODUCT_WEIGHT: Flag indicating to toggle visibility the Product weight 
- + HIDE_TOP_BRAND_SECTION: Flag indicating to toggle visibility the Popular Brands on Home
- + HIDE_TOP_BRAND_TAB: Flag indicating to toggle visibility Top Brand in UITabBar
  + HOST_URL: Frontend url of the organisation
  + IS_GRASSDOOR: Flag indicating if the application is grassdoor or not
  + LAUNCHER_NAME: 
- + MIXPANEL_ID: Mixpanel token to initialise the Mixpanel
- + ONESIGNAL_APP_ID: OneSignal token to initialise the OneSignal
  + ROLLBAR_KEY: Rollbar token to initialise the Rollbar Tracker
  + SEGMENT_API_KEY: Segment token to initialise the Sigment Analytics
  + WEBSITE_URL: Organisation frontend url
- + ZENDESK_ACCOUNT_KEY: Zendesk Account key
- + ZENDESK_APP_ID: Zendesk App Id
- + ZENDESK_CLIENT_ID: Zendesk Client Id
- + ZENDESK_URL: Zendesk frontend url
 

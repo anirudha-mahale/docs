@@ -249,7 +249,7 @@ SCart.shared.getCartCount() -> Int
 
 To match with your application style we provide you an interface to set fonts.
 
-If you don't provide with font, Default we use is `ProximaNova`
+Default font used is `ProximaNova`
 
 Installation
 + Drag & Drop fonts in project structure and add it to your target.

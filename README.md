@@ -94,7 +94,7 @@ GrassdoorManager.shared.setUserDeliveryDetails(address: Grassdoor.Address)
 + If only zipcode is passed, the function will only store the zipcode in localStorage & return default address
 
 ```swift
-SCart.setDelivery(type: Grassdoor.DeliveryType, onCompletion: ((Grassdoor.Operation?) -> Void)?)
+SCart.shared.setDelivery(type: Grassdoor.DeliveryType, onCompletion: ((Grassdoor.Operation?) -> Void)?)
 ```
 
 #### Parameters

@@ -88,7 +88,9 @@ GrassdoorManager.shared.setUserDeliveryDetails(address: Grassdoor.Address)
   
   `init(zipcode: String, address: String, placeId: String, addressId: Int, latitude: Double, longitude: Double, state: String, city: String, country: String, zoneName: String)`
 
-
+```swift
+GrassdoorManager.shared.setUserDeliveryDetails(postcode: String)
+```
 
 #### Note: 
 + To receive precise formatted address, either pass latitude & longitude or place_id(placeId from Google places API).
@@ -136,6 +138,13 @@ Product or Bundle should be filtered from product list API to obtain the product
 
 ```swift
 SCart.shared.remove(product: Product, onCompletion: ((Grassdoor.Operation?) -> Void)?)
+```
+
+## Decrease the product quantity to zero from Cart
+The below method will remove and clear the product quantity to zero.
+
+```swift
+SCart.shared.delete(product: Product, onCompletion: ((Grassdoor.Operation?) -> Void)?)
 ```
 
 #### Parameter

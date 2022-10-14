@@ -80,6 +80,10 @@ SUser().verifyUser(country:Country,telephone:String,otp:String,onCompletion:((_ 
 
 ## Set Delivery Details and Delivery Type
 ```swift
+GrassdoorManager.shared.setUserDeliveryDetails(postcode: String)
+```
+
+```swift
 GrassdoorManager.shared.setUserDeliveryDetails(address: Grassdoor.Address)
 ```
 
@@ -88,9 +92,7 @@ GrassdoorManager.shared.setUserDeliveryDetails(address: Grassdoor.Address)
   
   `init(zipcode: String, address: String, placeId: String, addressId: Int, latitude: Double, longitude: Double, state: String, city: String, country: String, zoneName: String)`
 
-```swift
-GrassdoorManager.shared.setUserDeliveryDetails(postcode: String)
-```
+
 
 #### Note: 
 + To receive precise formatted address, either pass latitude & longitude or place_id(placeId from Google places API).

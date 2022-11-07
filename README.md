@@ -1,9 +1,9 @@
 
 # Setup your Integration
-The GrassdoorFramework iOS SDK is compatible with apps supporting iOS 14 and above, and can be installed with CocoaPods as of now.
+The GrassdoorFramework iOS SDK is compatible with apps supporting iOS 14 and above.
 
 ## Installation
-The Grassdoor Framework iOS SDK is compatible with apps supporting iOS 14 and above, and can be installed with CocoaPods or by manually integrating the framework.
+The Grassdoor Framework iOS SDK is compatible with apps supporting iOS 14 and above, and can be installed by manually integrating the framework.
 
 Install Manually
 + Download the `GrassdoorFramework.xcframework` from Github

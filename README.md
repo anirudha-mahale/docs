@@ -308,3 +308,4 @@ The Grassdoor SDK supports a number of feature which allow for customizing certa
  + SEGMENT_API_KEY: Segment token to initialise the Sigment Analytics
  + WEBSITE_URL: Organisation frontend url
 
+You can download the sample project from [here](https://github.com/bidchatindia/Grassdoor-sdk-demo-app/releases/tag/1.0)
